@@ -4,11 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "protractor": "protractor spec/conf.js",
+    "protractor-dev": "protractor spec/conf.js --chrome"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "protractor": "^1.6.0"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.8.0"
   }
 }
