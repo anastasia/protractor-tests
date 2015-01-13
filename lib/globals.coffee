@@ -1,0 +1,1 @@
+global.Org = require '../app/db/models/organization'

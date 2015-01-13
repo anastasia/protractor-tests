@@ -31,11 +31,11 @@ describe 'angularjs homepage', ->
   beforeEach ->
     browser.get 'http://juliemr.github.io/protractor-demo/'
 
-  afterEach ->
-    browser.manage().logs().get('browser').then (browserLogs) ->
-      expect(browserLogs.length).toEqual 0
-      if browserLogs.length
-        console.log 'browserLogs:' +JSON.stringify(browserLogs)
+  # afterEach ->
+  #   browser.manage().logs().get('browser').then (browserLogs) ->
+  #     expect(browserLogs.length).toEqual 0
+  #     if browserLogs.length
+  #       console.log 'browserLogs:' +JSON.stringify(browserLogs)
 
 
   it 'should have a history', ->
