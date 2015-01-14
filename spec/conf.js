@@ -10,7 +10,8 @@ var browsers = {
 }
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['./tests/*.coffee']
+  specs: ['./tests/*.coffee'],
+  baseUrl: "http://localhost:8000"
 }
 
 // baseUrl: "http://localhost:3000"

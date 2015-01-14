@@ -12,13 +12,13 @@ app.use express.static(__dirname + '/app')
 server.listen 8000, ->
   console.log 'Server running at PORT 8000'
 
+
 app.get '/', (req, res) ->
+  console.log 'request?', req
+  # orgsObj = Organization.sync.find {}, (err, orgs) ->
+  #   orgMap = {}
 
-  orgsObj = Organization.sync.find {}, (err, orgs) ->
-    orgMap = {}
-
-    orgs.forEach (org) ->
-      orgMap[org.name] = org
-    return orgMap
-
-  res.render 'index.html', {orgs: orgsObj}
+  #   orgs.forEach (org) ->
+  #     orgMap[org.name] = org
+  #   return orgMap
+  res.render 'index.html'

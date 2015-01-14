@@ -1,5 +1,5 @@
 angular
-.module('app', ['ngRoute'])
+.module('myApp', ['ngRoute'])
 .config(['$routeProvider', ($routeProvider) ->
 ])
 .controller 'MainController', ($scope) ->
@@ -24,3 +24,5 @@ angular
       max_publish: 8,
       stacks_published: 8
   ]
+
+  return
