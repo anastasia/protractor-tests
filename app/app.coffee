@@ -1,8 +1,19 @@
-angular
-.module('myApp', ['ngRoute'])
-.config(['$routeProvider', ($routeProvider) ->
-])
+angular.module('myApp', ['ngRoute'])
+.config ($routeProvider) ->
+  $routeProvider
+    .when('/', {
+      # template: '<div> hi there</div>'
+      templateUrl: 'partials/main.tpl.html'
+      controller: 'MainController'
+    })
+
 .controller 'MainController', ($scope) ->
+  $scope.sometext = "click here"
+  $scope.clicked = false
+  $scope.changeText = ->
+
+    $scope.clicked = !$scope.clicked
+    $scope.sometext = if $scope.clicked then "hooray you clicked!" else "click here"
   $scope.orgs = [
       name: 'newsbound',
       owner_id: '1234',

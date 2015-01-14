@@ -1,0 +1,16 @@
+<div ng-controller="MainController" >
+<div class="simpleRepeater" ng-repeat="org in organizations">
+  {{org}}, {{organizations[org]}}
+</div>
+<div id="organizations" ng-repeat="(key, org) in orgs">
+  <pre>{{org}}</pre>
+  <h3>{{org.name}}</h3>
+  {{org.stacks_published}} / <span ng-if="org.max_publish<999999">{{org.max_publish}}</span><span ng-if="org.max_publish>=999999">Unlimited</span> stacks published
+</div>
+<button
+  id="importantbutton"
+  ng-click="changeText(clicked)"
+  style="width:100px; height:70px; margin:20px; padding:10px">
+  {{sometext}}
+</button>
+</div>

@@ -11,14 +11,12 @@ var browsers = {
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
   specs: ['./tests/*.coffee'],
-  baseUrl: "http://localhost:8000"
+  baseUrl: "http://localhost:8000",
+  rootElement: '.my-app',
+  jasmineNodeOpts: {
+    showColors: true
+  }
 }
-
-// baseUrl: "http://localhost:3000"
-// process.argv  — read command line properties
-// argv[0] = generally node, process being run
-// argv[1] = name of script being run
-
 
 if (process.argv[3] == '--chrome') {
   exports.config.capabilities = browsers.chrome

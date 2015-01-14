@@ -1,4 +1,6 @@
 mongoose  = require 'mongoose'
+fibrous   = require 'fibrous'
+
 Schema    = mongoose.Schema
 OrganizationSchema = new Schema({
   name:
@@ -15,4 +17,4 @@ OrganizationSchema = new Schema({
     default: 0
   })
 
-module.exports = mongoose.model('Organization', OrganizationSchema)
+module.exports = mongoose.model 'Organization', OrganizationSchema

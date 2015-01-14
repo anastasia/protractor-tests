@@ -1,24 +1,40 @@
-mongoose      = require 'mongoose'
-Organization  = require './app/db/models/organization'
-express       = require 'express'
-fibrous       = require 'fibrous'
-http          = require 'http'
+Organization   = require './app/db/models/organization'
+express        = require 'express'
+exphbs         = require 'express3-handlebars'
 
-app           = express()
+errorHandler   = require 'error-handler'
+
+http           = require 'http'
+fibrous        = require 'fibrous'
+
+app = module.exports = express()
 
 server = http.createServer(app)
-app.use express.static(__dirname + '/app')
-
-server.listen 8000, ->
-  console.log 'Server running at PORT 8000'
 
 
 app.get '/', (req, res) ->
-  console.log 'request?', req
-  # orgsObj = Organization.sync.find {}, (err, orgs) ->
-  #   orgMap = {}
+  # orgs = Organization.sync.find({}, null)
 
-  #   orgs.forEach (org) ->
-  #     orgMap[org.name] = org
-  #   return orgMap
-  res.render 'index.html'
+  Organization.find( {}, (err, orgs) ->
+    orgMap = {}
+
+    orgs.forEach (org) ->
+      orgMap[org.name] = org
+    console.log 'orgMap?',orgMap
+    # return orgMap
+  )
+  res.render 'index'
+# app.use express.bodyParser()
+app.configure ->
+  app.engine 'handlebars', exphbs({
+    defaultLayout: 'main',
+    layoutsDir:  __dirname + '/views'})
+
+  app.set 'view engine', 'handlebars'
+  app.set 'views', __dirname + '/views'
+
+  app.use fibrous.middleware
+  app.use express.static(__dirname + '/app')
+
+server.listen 8000, ->
+  console.log 'Server running at PORT 8000'

@@ -1,10 +1,9 @@
 #!/usr/bin/env coffee
-
-vm           = require('vm')
-repl         = require('repl')
-fibrous      = require('fibrous')
-CoffeeScript = require('coffee-script');
-mongoose     = require('mongoose')
+vm           = require 'vm'
+repl         = require 'repl'
+fibrous      = require 'fibrous'
+CoffeeScript = require 'coffee-script'
+mongoose     = require 'mongoose'
 
 
 module.exports =
