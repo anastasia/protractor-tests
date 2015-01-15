@@ -1,7 +1,8 @@
 mongoose  = require 'mongoose'
 fibrous   = require 'fibrous'
-
 Schema    = mongoose.Schema
+mongoose.connect('mongodb://localhost/organizations');
+
 OrganizationSchema = new Schema({
   name:
     type: String
@@ -16,5 +17,6 @@ OrganizationSchema = new Schema({
     type: Number
     default: 0
   })
+
 
 module.exports = mongoose.model 'Organization', OrganizationSchema
