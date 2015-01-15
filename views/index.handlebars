@@ -1,12 +1,31 @@
-<div ng-app="myApp">
-body:  tinyapp
-<div ng-view=""></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-route.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <title>mockapp for protractor testing</title>
+</head>
+<body>
+<div ng-app="myApp" class="my-app">
+ <div ng-view>
+
+
+ </div>
+  <br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tinyapp
+  //clicked//
 
 </div>
 
 
 <script type="text/javascript">
-  // window.organizations = {
-  //   orgs: {{{orgs}}}
-  // }
+  window.config = {
+    orgs: {{{orgs}}}
+  }
 </script>
+</html>

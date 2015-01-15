@@ -23,5 +23,5 @@ describe 'mocky mock app', ->
     it 'should be four itmes long', ->
       expect(orgsList.count()).toBe 4
 
-    # it ''
+
 
