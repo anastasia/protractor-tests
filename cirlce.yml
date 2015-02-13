@@ -1,0 +1,9 @@
+dependencies:
+  override:
+    - npm install -dev
+
+checkout:
+  post:
+    - git submodule update --init
+
+test:
