@@ -10,4 +10,8 @@ test:
   pre:
     - npm install grunt
     - npm install node-dev
-    - npm start
+    - npm install jasmine-node@1.14.3
+
+  override:
+    - npm test
+    - grunt protractor

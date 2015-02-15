@@ -15,7 +15,7 @@ require 'jasmine-only'
 require 'fibrous/lib/jasmine_spec_helper'
 
 app = require '../../app'
-server = {}
+# server = {}
 db = {}
 
 befores = []
@@ -39,16 +39,16 @@ global.afterAll = afterAll
 
 global.HOST_URL = 'http://localhost:5555'
 
-# beforeAll ->
-#   console.log 'beforeAll, before get'
-MONGO_URL = 'mongodb://localhost/protractor_app'
-mongoose.connect MONGO_URL unless mongoose.connection.db
-db = mongoose.connection
-server = http.createServer(app).listen app.get('port')
+beforeAll ->
+  console.log 'beforeAll, before get'
+  MONGO_URL = 'mongodb://localhost/protractor_app'
+  mongoose.connect MONGO_URL unless mongoose.connection.db
+  db = mongoose.connection
+# server = http.createServer(app).listen app.get('port')
 
-afterAll ->
-  server.close ->
-    console.log 'afterAll: server.close done.'
+# afterAll ->
+#   server.close ->
+#     console.log 'afterAll: server.close done.'
 
 # create a user
 # beforeEach fibrous ->

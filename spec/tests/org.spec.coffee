@@ -6,7 +6,6 @@ describe 'mocky mock app', ->
     buttonText = element By.binding('sometext')
 
     it 'should change on click', ->
-      console.log 'first test'
       text = buttonText.getText()
       expect(text).toEqual 'click here'
       button.click()
