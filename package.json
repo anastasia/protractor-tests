@@ -5,7 +5,7 @@
   "main": "app.coffee",
   "scripts": {
     "start": "NODE_PATH='./app' node-dev app.coffee",
-    "test": "NODE_PATH='./app' grunt protractor-test",
+    "test": "",
     "protractor": "NODE_PATH='./app' grunt protractor-test"
   },
   "author": "",
