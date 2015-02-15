@@ -7,3 +7,7 @@ checkout:
     - git submodule update --init
 
 test:
+  pre:
+    - npm install grunt
+    - npm install node-dev
+    - npm start
