@@ -15,3 +15,9 @@ test:
   override:
     - npm test
     - grunt protractor
+
+deployment:
+  production:
+    branch: master
+    heroku:
+      appname: protractor-tests2
