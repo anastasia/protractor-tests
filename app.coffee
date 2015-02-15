@@ -7,6 +7,7 @@ Organization  = require './app/db/models/organization'
 app = express()
 
 app.configure ->
+  app.set 'port', process.env.PORT || 8000
   app.use express.static(__dirname + '/app')
   app.use fibrous.middleware
   app.use express.bodyParser()
@@ -25,8 +26,9 @@ app.get '/', (req, res) ->
   orgs = Organization.sync.find({}, null)
   res.render 'index', {orgs:JSON.stringify(orgs)}
 
-server = http.createServer(app)
+# server = http.createServer(app)
+# TODO: error out if not connected to db
 
+http.createServer(app).listen app.get('port'), ->
+  console.log "listening on port", app.get('port')
 
-server.listen 8000, ->
-  console.log 'Server running at PORT 8000'
