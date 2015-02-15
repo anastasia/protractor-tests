@@ -19,12 +19,23 @@ module.exports = (grunt) ->
       compile:
         files: 'app/**/*.coffee'
         tasks: ["newer:coffee"]
-
+    protractor:
+      options:
+        configFile: "./spec/conf.js"
+        noColor: false
+        args: {}
+        message: 'grunting protractor'
+      e2e:
+        options:
+          keepAlive: false
   })
+
   #Load Tasks
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-newer'
   grunt.loadNpmTasks 'grunt-contrib-watch'
+  grunt.loadNpmTasks 'grunt-protractor-runner'
 
   grunt.registerTask 'compile', ['coffee']
   grunt.registerTask 'default', ['coffee', 'watch:compile']
+  grunt.registerTask 'protractor-test', ['protractor:e2e']
