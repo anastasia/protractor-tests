@@ -1,25 +1,16 @@
-var browsers = {
-  firefox: {
-    name: 'firefox',
-    browserName: 'firefox'
-  },
-  chrome: {
-    name: 'chrome',
-    browserName: 'chrome'
-  }
-}
 exports.config = {
-  browsers: {
-    chrome: {
-      name: 'chrome',
-      browserName: 'chrome'
-    }
+  allScriptsTimeout: 11000,
+  args: {
+    directConnect: true,
+    chromeDriver: '../node_modules/chromedriver/lib/chromedriver/chromedriver'
   },
   specs: ['./tests/*.coffee'],
   baseUrl: "http://localhost:5555",
   rootElement: '.my-app',
+  framework: 'jasmine',
   jasmineNodeOpts: {
-    showColors: true
+    showColors: true,
+    defaultTimeoutInterval: 30000
   }
 }
 
