@@ -4,7 +4,6 @@ angular.module('myApp', ['ngRoute'])
     .when('/', {
       controller: 'MainController'
       templateUrl: 'partials/main.tpl.html'
-
     })
 .controller 'MainController', ($scope) ->
   $scope.orgs = window.config.orgs
