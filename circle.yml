@@ -28,3 +28,4 @@ test:
 
   override:
     - npm test
+    - npm run protractor
