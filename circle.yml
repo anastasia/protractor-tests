@@ -11,8 +11,6 @@ dependencies:
     - wget http://selenium-release.storage.googleapis.com/2.44/selenium-server-standalone-2.44.0.jar
     - java -jar selenium-server-standalone-2.44.0.jar:
           background: true
-  pre:
-    - wget -O selenium-server.jar http://selenium.googlecode.com/files/selenium-server-standalone-2.33.0.jar
   override:
     - npm install -dev
 
