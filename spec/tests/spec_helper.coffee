@@ -38,6 +38,7 @@ beforeAll ->
   MONGO_URL = 'mongodb://localhost/protractor_app'
   mongoose.connect MONGO_URL unless mongoose.connection.db
   db = mongoose.connection
+  browser.waitForAngular()
 # server = http.createServer(app).listen app.get('port')
 
 # afterAll ->
