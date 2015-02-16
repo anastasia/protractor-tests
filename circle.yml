@@ -7,10 +7,9 @@ deployment:
     heroku:
       appname: protractor-tests2
 dependencies:
-  pre:
+  post:
     - wget http://selenium-release.storage.googleapis.com/2.44/selenium-server-standalone-2.44.0.jar
-    - java -jar selenium-server-standalone-2.44.0.jar:
-        background: true
+    - nohup bash -c "java -jar selenium-server-standalone-2.44.0.jar &"
   override:
     - npm install -dev
 
