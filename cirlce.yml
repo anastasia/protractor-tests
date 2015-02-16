@@ -7,6 +7,8 @@ deployment:
     heroku:
       appname: protractor-tests2
 dependencies:
+  pre:
+    - wget -O selenium-server.jar http://selenium.googlecode.com/files/selenium-server-standalone-2.33.0.jar
   override:
     - npm install -dev
 
