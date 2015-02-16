@@ -2,7 +2,7 @@
 # # Allows you to set NODE_PATH at runtime (grunt-env or otherwise)
 # # and re-init require's path handling
 # # rather than running `NODE_PATH='./app' grunt integration`
-process.env.PORT = 5555
+process.env.PORT = process.env.PORT || 5555
 process.env.NODE_PATH = '../../app'
 require('module')._initPaths()
 
