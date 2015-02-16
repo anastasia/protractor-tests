@@ -12,8 +12,8 @@ checkout:
     - git submodule update --init
 
 test:
-  pre:
-    - npm install protractor@1.6.0
+  post:
+    - npm install -g protractor
     - npm install webdriver-manager
     - ./node_modules/webdriver-manager/bin/webdriver-manager update
     - ./node_modules/webdriver-manager/bin/webdriver-manager start:

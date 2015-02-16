@@ -26,7 +26,7 @@ module.exports = (grunt) ->
         args: {}
       e2e:
         options:
-          keepAlive: false
+          keepAlive: true
   })
 
   #Load Tasks
