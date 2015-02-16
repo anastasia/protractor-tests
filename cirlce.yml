@@ -1,3 +1,11 @@
+machine:
+  node:
+    version: 0.10.13
+deployment:
+  production:
+    branch: master
+    heroku:
+      appname: protractor-tests2
 dependencies:
   override:
     - npm install -dev
@@ -15,9 +23,3 @@ test:
   override:
     - npm test
     - grunt protractor
-
-deployment:
-  production:
-    branch: master
-    heroku:
-      appname: protractor-tests2
