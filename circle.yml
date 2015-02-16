@@ -24,4 +24,4 @@ test:
 
   override:
     - npm test
-    - grunt protractor
+    - grunt protractor-test
