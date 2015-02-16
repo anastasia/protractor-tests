@@ -1,10 +1,6 @@
 machine:
   post:
     - npm install -g protractor
-    - npm install webdriver-manager
-    - ./node_modules/webdriver-manager/bin/webdriver-manager update
-    - ./node_modules/webdriver-manager/bin/webdriver-manager start:
-        background: true
     - npm install grunt
     - npm install node-dev
     - npm install jasmine-node@1.14.3
