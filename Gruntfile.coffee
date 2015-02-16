@@ -24,7 +24,6 @@ module.exports = (grunt) ->
         configFile: "./spec/conf.js"
         noColor: false
         args: {}
-        message: 'grunting protractor'
       e2e:
         options:
           keepAlive: false
@@ -34,7 +33,6 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-newer'
   grunt.loadNpmTasks 'grunt-contrib-watch'
-  grunt.loadNpmTasks 'grunt-protractor-runner'
 
   grunt.registerTask 'compile', ['coffee']
   grunt.registerTask 'default', ['coffee', 'watch:compile']

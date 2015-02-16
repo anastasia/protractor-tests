@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node-dev app.coffee",
     "test": "",
-    "protractor": "NODE_PATH='./app' grunt protractor-test"
+    "protractor": "protractor spec/conf.js"
   },
   "author": "",
   "license": "ISC",
@@ -29,7 +29,6 @@
     "grunt-contrib-concat": "^0.5.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-newer": "^1.1.0",
-    "grunt-protractor-runner": "^1.2.1",
     "jasmine-only": "^0.1.0",
     "node-dev": "^2.6.1"
   }
