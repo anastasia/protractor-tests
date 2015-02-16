@@ -16,11 +16,12 @@ checkout:
 
 test:
   pre:
+    - webdriver-manager update
+    - webdriver-manager start:
+        background: true
     - npm install grunt
     - npm install node-dev
     - npm install jasmine-node@1.14.3
-    - npm install chromedriver
-
   override:
     - npm test
     - npm run protractor

@@ -3,7 +3,6 @@ exports.config = {
   capabilities: {
     'browserName': 'chrome'
   },
-  directConnect: true,
   keepAlive: true,
   allScriptsTimeout: 11000,
   specs: ['./tests/*.coffee'],
