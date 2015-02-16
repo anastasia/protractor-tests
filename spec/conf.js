@@ -6,7 +6,7 @@ exports.config = {
   keepAlive: true,
   allScriptsTimeout: 11000,
   specs: ['./tests/*.coffee'],
-  baseUrl: 'http://localhost:' + (process.env.PORT || '5555'),
+  baseUrl: 'http://localhost:' + (process.env.PORT || '8000'),
   framework: 'jasmine',
   jasmineNodeOpts: {
     showColors: true,

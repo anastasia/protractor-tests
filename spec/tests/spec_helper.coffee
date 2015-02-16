@@ -1,4 +1,4 @@
-process.env.PORT = process.env.PORT || 5555
+process.env.PORT = process.env.PORT || 8000
 process.env.NODE_PATH = '../../app'
 
 http     = require 'http'
@@ -30,8 +30,6 @@ jasmine.getEnv().addReporter {
 
 global.beforeAll = beforeAll
 global.afterAll = afterAll
-
-global.HOST_URL = 'http://localhost:5555'
 
 beforeAll ->
   console.log 'beforeAll, before get'

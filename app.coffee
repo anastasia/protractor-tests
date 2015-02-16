@@ -7,7 +7,7 @@ Organization  = require './app/db/models/organization'
 app = express()
 
 app.configure ->
-  app.set 'port', process.env.PORT || 8000
+  app.set 'port', process.env.PORT || 3300
   app.use express.static(__dirname + '/app')
   app.use fibrous.middleware
   app.use express.bodyParser()
