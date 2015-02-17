@@ -1,16 +1,15 @@
 describe 'mocky mock app', ->
   beforeEach ->
-    browser.wait( ->
-      console.log 'browser waiting'
-      return true
-    )
-    browser.get '/'
+    browser.driver.get 'http://localhost:3300/'
+    browser.driver.wait ->
+      browser.driver.isElementPresent By.id("importantbutton")
+    , 1200
+    expect(browser.driver.getCurrentUrl()).toMatch("/");
   describe 'button text', ->
     beforeEach ->
       @button = element By.id('importantbutton')
       @buttonText = element By.binding('sometext')
     it 'should change on click', ->
-      browser.get '/'
       text = @buttonText.getText()
       expect(text).toEqual 'click here'
       @button.click()
