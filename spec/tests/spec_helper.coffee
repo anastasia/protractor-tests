@@ -35,11 +35,3 @@ beforeAll ->
   MONGO_URL = 'mongodb://localhost/protractor_app'
   mongoose.connect MONGO_URL unless mongoose.connection.db
   db = mongoose.connection
-
-process.on 'uncaughtException', (err) ->
-  console.error 'uncaughtException'
-  console.error err.message
-  console.error err.orgStatusMessage
-  browser.end (err, res) ->
-    process.exit(1)
-
