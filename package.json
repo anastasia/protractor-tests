@@ -6,6 +6,9 @@
   "scripts": {
     "start": "node-dev app.coffee",
     "test": "",
+    "preupdate-webdriver": "npm install",
+    "update-webdriver": "webdriver-manager update",
+    "preprotractor": "npm run update-webdriver",
     "protractor": "protractor spec/conf.js"
   },
   "author": "",

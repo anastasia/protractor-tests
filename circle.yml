@@ -13,12 +13,6 @@ checkout:
 
 test:
   pre:
-    - npm install -g protractor
-    - npm install -g webdriver-manager
-    - webdriver-manager update
-    - npm install grunt
-    - npm install node-dev
-    - npm install jasmine-node@1.14.3
     - npm start:
         background: true
     - sleep 5
