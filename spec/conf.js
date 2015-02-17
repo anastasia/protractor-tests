@@ -5,6 +5,8 @@ exports.config = {
     './tests/*.coffee'
   ],
 
+  directConnect: true,
+
   capabilities: {
     'browserName': 'chrome'
   },
